@@ -340,5 +340,5 @@ GeneQC_modeling <- function(dat){
   .res <- cbind(.res, c(list2[[8]], rep(0, dim(list2[[10]])[1])))
   colnames(.res) <- c('Gene ID', 'D1', 'D2', 'D3', 'D4', 'D-score', 'Category', 'Significance')
 
-  list3 <- list(d, sd, THETAS[,order(apply(FUN =  gamma_mode1,MARGIN =  2, X = THETAS))], PARS[,order(PARS[1,])], cutoffs, parameters, categ, sign, .res)
+  list3 <- list(d, sd, THETAS[,order(apply(FUN =  gamma_mode1,MARGIN =  2, X = THETAS))], PARS[,order(PARS[1,])], cutoffs, parameters, categ, sign, .res[,c(1:4,6:8)])
 }
