@@ -275,6 +275,10 @@ GeneQC_modeling <- function(dat){
       cutoffs[i] <- mean(gs[min(which(lv != lv[1]))], gs[min(which(lv != lv[1]))+1])
     }
   }
+  
+  if( (abs(cutoffs[2] - cutoffs[1])/(range(d)[2] - range(d)[1])) < 0.20 ){
+    cutoffs[1] <- (min(d) + cutoffs[2])/2
+  }
 
   gamma_mode1 <- function(x){
     if(x[1] > 1){
