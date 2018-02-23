@@ -9,6 +9,7 @@ if(!require(“devtools”)) install.packages(“devtools”)
 devtools::install_github(“apmcdermaid/GeneQC/GeneQC”)
 
 2.	Load GeneQC library
+
 library(GeneQC)
 
 3.	Read in GeneQC Feature Extraction output file
