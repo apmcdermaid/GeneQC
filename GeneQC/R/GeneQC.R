@@ -338,7 +338,7 @@ GeneQC <- function(dat){
   .res <- cbind(.res, c(list2[[1]], rep(0, dim(list2[[10]])[1])))
   .res <- cbind(.res, c(list2[[7]], rep('None', dim(list2[[10]])[1])))
   .res <- cbind(.res, c(list2[[8]], rep(0, dim(list2[[10]])[1])))
-  colnames(.res) <- c('Gene ID', 'D1', 'D2', 'D3', 'D4', 'D-score', 'Category', 'Significance')
+  colnames(.res) <- c('Gene ID', 'D1', 'D2', 'D3', 'D4', 'D-score', 'Category', 'Alternative Likelihood')
 
   list3 <- list(d, sd, THETAS[,order(apply(FUN =  gamma_mode1,MARGIN =  2, X = THETAS))], PARS[,order(PARS[1,])], cutoffs, parameters, categ, sign, .res[,c(1:4,6:8)])
   list3[[9]]
