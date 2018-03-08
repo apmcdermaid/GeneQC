@@ -9,4 +9,5 @@ Encoding: UTF-8
 LazyData: true
 Imports:
 	mixtools
+	glmnet
 
