@@ -81,7 +81,7 @@ GeneQC <- function(dat){
   set.seed(123456)
   B <-list()
   for (KK in ran){
-    B[[KK]] <- mixtools::normalmixEM(M,k=KK)
+    B[[KK]] <- mixtools::normalmixEM(M,k=KK, ECM = TRUE)
   }
 
   n <- length(M)   # number of observations
