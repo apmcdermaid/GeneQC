@@ -1,5 +1,5 @@
-dat <- read.table('C:/Users/AdamM/OneDrive/Documents/GeneQC/d-score modeling/grape_SRR2080995.txt', header = TRUE, sep = '\t')
-
+GeneQC <- function(dat){
+  
 ran <- 2:3
 
 pen <- 10
@@ -352,3 +352,4 @@ colnames(.res) <- c('Gene ID', 'D1', 'D2', 'D3', 'D4', 'D-score', 'Category', 'A
 rownames(.res) <- NULL
 list3 <- list(d, sd, THETAS[,order(apply(FUN =  gamma_mode1,MARGIN =  2, X = THETAS))], PARS[,order(PARS[1,])], cutoffs, parameters, categ, sign, .res[,c(1:4,6:8)])
 list3[[9]]
+}
